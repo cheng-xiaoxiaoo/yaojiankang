@@ -1,5 +1,5 @@
 package yaijiankang.service.home;
 
-public class HomeClassImpl {
+public class HomeServiceImpl {
 
 }

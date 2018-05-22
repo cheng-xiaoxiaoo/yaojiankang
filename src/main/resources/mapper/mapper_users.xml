@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yaojiankang.users">
+
+	<insert id="UsersRegister" parameterType="yaojiankang.intf.users.dto.User" useGeneratedKeys="true" keyProperty="user_id">
+	INSERT INTO users(
+	username,
+	password,
+	role_id
+	)
+	VALUES
+		(
+			#{userName}, #{password},1
+	)
+	</insert>
+</mapper>
