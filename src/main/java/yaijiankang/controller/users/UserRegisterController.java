@@ -7,6 +7,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,14 +19,17 @@ import yaijiankang.intf.http.HttpResponseConstant;
 import yaijiankang.intf.users.UsersService;
 import yaijiankang.intf.users.dto.User;
 
-public class UsersRegisterController {
+@Controller
+@RequestMapping("/User")
+
+public class UserRegisterController {
 
 	@Autowired
 	UsersService usersService;
 	
 	@RequestMapping(value = "/UserRegister", method = RequestMethod.GET)
 	public ModelAndView showRegisterPage() {
-		ModelAndView mView = new ModelAndView("/user/UserRegister");
+		ModelAndView mView = new ModelAndView("/User/UserRegister");
 		return mView;
 	}
 
